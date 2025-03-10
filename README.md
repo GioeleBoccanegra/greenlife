@@ -1,54 +1,40 @@
-# React + TypeScript + Vite
+# GreenLife App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GreenLife è un'applicazione web sviluppata con React che aiuta gli utenti a monitorare e completare azioni quotidiane per ridurre la propria impronta ecologica. Ogni azione sostenibile può essere selezionata o deselezionata, e il conteggio delle azioni completate si aggiornerà automaticamente.
+L'app è disponibile su [http://localhost:3000](https://gioele-boccanegra-greenlife-app.netlify.app/).
 
-Currently, two official plugins are available:
+## Funzionalità
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Visualizza una lista di azioni sostenibili da completare ogni giorno.
+- Ogni azione è accompagnata da una checkbox che l'utente può selezionare o deselezionare.
+- Il conteggio delle azioni completate viene aggiornato ogni volta che una checkbox viene selezionata o deselezionata.
+- Interfaccia semplice e reattiva.
 
-## Expanding the ESLint configuration
+## Tecnologie Utilizzate
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: per la creazione dell'interfaccia utente.
+- **useState**: per la gestione dello stato delle checkbox e del conteggio delle azioni completate.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Installazione
+
+1. **Clona il repository**:
+
+   ```
+   bash
+   git clone https://github.com/GioeleBoccanegra/greenlife.git
+   ```
+2.**Accedi alla cartella del progetto**:
+
+```
+cd greenlife
+```
+3.**Installa le dipendenze**:
+```
+npm install
+```
+4.**Avvia il server di sviluppo**:
+```
+npm start
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
