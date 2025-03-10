@@ -1,0 +1,111 @@
+/* Stile globale */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f0f0, #e0f7fa);
+  /* Aggiunta gradiente per il fondo */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenitore principale dell'app */
+.greenlife-app {
+  background-color: #ffffff;
+  border-radius: 12px;
+  /* Bordi arrotondati più evidenti */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Ombra più morbida */
+  padding: 40px;
+  width: 90%;
+  max-width: 700px;
+  /* Dimensioni maggiori per schermi grandi */
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Titolo principale */
+.greenlife-app h1 {
+  font-size: 38px;
+  /* Titolo più grande */
+  margin-bottom: 20px;
+  color: #4CAF50;
+  /* Colore verde per GreenLife */
+  font-weight: bold;
+  letter-spacing: 2px;
+  /* Maggiore distanza tra le lettere */
+  text-transform: uppercase;
+  /* Tutto maiuscolo per un effetto più deciso */
+}
+
+/* Stile per il conteggio delle azioni completate */
+.greenlife-app p {
+  font-size: 20px;
+  /* Aumentata la dimensione del font */
+  margin-top: 20px;
+  color: #388e3c;
+  /* Verde scuro per il conteggio */
+  font-weight: 700;
+  /* Font più bold */
+  letter-spacing: 1px;
+}
+
+/* Lista delle task (contenitore di ogni task) */
+.greenlife-app .task-item {
+  background-color: #e8f5e9;
+  padding: 15px 25px;
+  /* Aggiunto più spazio per ogni task */
+  margin: 15px 0;
+  /* Maggiore spazio tra le task */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Leggera ombra per separare ogni task */
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.greenlife-app .task-item:hover {
+  transform: translateY(-5px);
+  /* Aggiunto effetto hover per sollevare la task */
+  background-color: #c8e6c9;
+  /* Cambio di colore al passaggio del mouse */
+}
+
+/* Testo della task */
+.greenlife-app .task-item h2 {
+  margin: 0;
+  font-size: 22px;
+  /* Testo un po' più grande per le task */
+  color: #388e3c;
+  flex-grow: 1;
+  font-weight: 600;
+  /* Testo più grassetto */
+  text-transform: capitalize;
+  /* Prima lettera di ogni parola maiuscola */
+}
+
+/* Stile per la checkbox */
+.greenlife-app .task-item input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Aggiungi un effetto di espansione sulla checkbox al passaggio del mouse */
+.greenlife-app .task-item input[type="checkbox"]:hover {
+  transform: scale(1.2);
+  /* Ingrandisce la checkbox al passaggio del mouse */
+}
+
+/* Stile per la checkbox selezionata */
+.greenlife-app .task-item input[type="checkbox"]:checked+h2 {
+  text-decoration: line-through;
+  color: #a5d6a7;
+  /* Verde chiaro per le azioni completate */
+}
