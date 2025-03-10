@@ -38,3 +38,14 @@ npm start
 
 ```
 
+## Struttura del Progetto
+
+- **`src/App.tsx`**: il componente principale dell'app che gestisce il conteggio delle azioni completate e la lista delle task.
+- **`src/components/TaskItem.tsx`**: il componente per ogni singola azione sostenibile, che include una checkbox e un titolo per ogni task.
+
+## Contribuire
+
+Se desideri contribuire al progetto, sentiti libero di fare una **fork** e inviare una **pull request**. Ogni contributo è benvenuto!
+
+
+
